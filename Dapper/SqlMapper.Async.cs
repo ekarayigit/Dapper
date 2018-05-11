@@ -32,7 +32,7 @@ namespace Dapper
         /// <param name="command">The command used to query on this connection.</param>
         /// <remarks>Note: each row can be accessed via "dynamic", or by casting to an IDictionary&lt;string,object&gt;</remarks>
         public static Task<IEnumerable<dynamic>> QueryAsync(this IDbConnection cnn, CommandDefinition command) =>
-            QueryAsync<dynamic>(cnn, typeof(DapperRow), command);
+            QueryAsync<dynamic>(cnn, typeof(DapperRow), command); 
 
         /// <summary>
         /// Execute a single-row query asynchronously using .NET 4.5 Task.
